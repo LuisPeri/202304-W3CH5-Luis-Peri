@@ -19,34 +19,11 @@
   </head>
 
   <body>
-    <h1>Pokémon List</h1>
+
 
     <ul id="pokemonList"></ul>
 
-    <script>
-      fetch('https://pokeapi.co/api/v2/pokemon')
-        .then(response => response.json())
-        .then(data => {
-          // Obtener la lista de Pokémon
-          const pokemons = data.results;
 
-          // Obtener el elemento <ul> donde se mostrarán los Pokémon
-          const pokemonList = document.getElementById('pokemonList');
-
-          // Mostrar los nombres de los Pokémon en pantalla
-          pokemons.forEach(pokemon => {
-            // Crear un elemento <li> para cada Pokémon
-            const listItem = document.createElement('li');
-            listItem.textContent = pokemon.name;
-
-            // Agregar el elemento <li> a la lista de Pokémon
-            pokemonList.appendChild(listItem);
-          });
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
-    </script>
   </body>
 
   </html>

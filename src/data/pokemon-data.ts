@@ -12,4 +12,9 @@ export class ApiPokemon {
     const response = await fetch(this.pokeUrl);
     return response.json();
   }
+
+  async getPokemon(url: PokemonInfo["url"]) {
+    const response = await fetch(url);
+    return Response.json();
+  }
 }
