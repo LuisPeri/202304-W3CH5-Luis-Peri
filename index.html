@@ -6,11 +6,51 @@
   <link rel="icon" type="icon" href="./public/image1_1024_1024_watermark.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PoKemon</title>
+  <script type="module" src="./src/index.ts" defer></script>
 </head>
 
 <body>
   <div id="app"></div>
-  <script type="module" src="/src/main.ts"></script>
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+    <title>Pokémon List</title>
+  </head>
+
+  <body>
+    <h1>Pokémon List</h1>
+
+    <ul id="pokemonList"></ul>
+
+    <script>
+      fetch('https://pokeapi.co/api/v2/pokemon')
+        .then(response => response.json())
+        .then(data => {
+          // Obtener la lista de Pokémon
+          const pokemons = data.results;
+
+          // Obtener el elemento <ul> donde se mostrarán los Pokémon
+          const pokemonList = document.getElementById('pokemonList');
+
+          // Mostrar los nombres de los Pokémon en pantalla
+          pokemons.forEach(pokemon => {
+            // Crear un elemento <li> para cada Pokémon
+            const listItem = document.createElement('li');
+            listItem.textContent = pokemon.name;
+
+            // Agregar el elemento <li> a la lista de Pokémon
+            pokemonList.appendChild(listItem);
+          });
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    </script>
+  </body>
+
+  </html>
+
 </body>
 
 </html>
