@@ -1,4 +1,4 @@
-import { Component } from "./component";
+/*import { Component } from "./component";
 
 export class Menu extends Component {
   constructor(public selector: string) {
@@ -17,3 +17,4 @@ export class Menu extends Component {
     `;
   }
 }
+*/

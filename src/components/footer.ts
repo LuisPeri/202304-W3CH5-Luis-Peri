@@ -10,7 +10,7 @@ export class Footer extends Component {
   createTemplate() {
     return `
       <footer class="footer">
-        <img src="./public/logo.webp" alt="logo PoKemon" height="150" width="300">
+        <img src="./public/Logo-Pokemon.png" alt="logo PoKemon" height="150" width="300">
       </footer>
     `;
   }

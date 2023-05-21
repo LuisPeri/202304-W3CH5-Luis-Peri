@@ -20,12 +20,12 @@ export class Card extends Component {
   }
 
   createTemplate() {
-    const list = this.pokemon.results
+    const list = this.pokemon
       .map(
         (item: any) => `
            <li>
       <p>${item.name}</p>
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${
+      <img class="poke-list" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${
         item.url.split("/")[6]
       }.gif" heigh=100 width=100>
       <span data-id="${item.url}"></span>

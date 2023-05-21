@@ -9,8 +9,7 @@ export class Main extends Component {
 
   createTemplate() {
     return `
-      <main class="main">
-        <ul cclass="pokemon-list"></ul>
+      <main id="main">
       </main>
     `;
   }
